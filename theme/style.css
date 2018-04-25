@@ -1,5 +1,7 @@
 body {
-  background-color: hotpink;
+  margin: 0;
+  background-color: grey;
+
  }
 
 h2 {color: orange;
@@ -8,6 +10,111 @@ h2 {color: orange;
 h1 {color: white;
  }
 
- #header {
-   color: color:white
+ul {
+  margin: 0 32px;
+  padding: 25px 25px 25px 40px;
+}
+
+li {
+  padding: 5px;
+  margin: 32px;
+}
+img {
+  width: 30%;
+  margin: 20px auto;
+  display: block;
+  max-width: 350px;
+
  }
+
+.container {
+  width: 90%;
+  margin: 0 auto;
+  max-width: 750px;
+ }
+
+ .firstpicture {
+ }
+
+ #image {
+
+ }
+
+ #navigation {
+ width: 100vw;
+ position: fixed;
+ background-color: lime;
+ opacity: .8;
+ top: 0;
+ padding: 10px;
+ font-weight: bold;
+}
+
+#navigation > ul {
+  list-style: none;
+}
+
+#navigation > ul > li {
+  display: inline;
+  position: relative;
+}
+
+#navigation > ul ul {
+  position: absolute;
+  top: 20px;
+  left: -10px;
+  background-color: white;
+  color: black;
+  list-style: none;
+  opacity: 1;
+  margin: 0;
+  padding: 0;
+  display: none;
+}
+#navigation a:hover + ul {
+  background-color: chartreuse;
+  display: block;
+ }
+
+#navigation > ul ul:hover {
+   display: block;
+}
+#header {
+  padding: 86px 0px;
+  color: white;
+  background-color: black;
+
+ }
+#header h1{
+  color: chartreuse;
+
+}
+
+#content {
+  background-color: gold;
+}
+
+#content > p {
+  font-style: italic;
+}
+
+#content a {
+  font-style: italic;
+
+}
+#content ul + p {
+
+}
+
+#footer {
+width: 100vw;
+background-color: grey;
+}
+
+div.container {
+  background-color: white;
+}
+
+#content p:nth-child(2n + 1) {
+  background-color: purple;
+}
