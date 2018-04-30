@@ -1,6 +1,7 @@
 body {
   margin: 0;
-  background-color: grey;
+  background-color: black;
+  color: white;
 
  }
 
@@ -8,6 +9,7 @@ h2 {color: orange;
  }
 
 h1 {color: white;
+  font-family: 'Oswald';
  }
 
 ul {
@@ -48,18 +50,27 @@ img {
  top: 0;
  padding: 10px;
  font-weight: bold;
+ font-family: 'Oswald';
 }
 
-#navigation > ul {
+#navigation .container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+#navigation .container > ul {
   list-style: none;
+  display: flex;
+  justify-content: space-around;
+
 }
 
-#navigation > ul > li {
-  display: inline;
+#navigation .container > ul > li {
   position: relative;
 }
 
-#navigation > ul ul {
+#navigation .container > ul ul {
   position: absolute;
   top: 20px;
   left: -10px;
@@ -76,18 +87,23 @@ img {
   display: block;
  }
 
-#navigation > ul ul:hover {
+#navigation .container > ul ul:hover {
    display: block;
 }
+/* this is a hidden comment */
+#navigation ul > li:hover {
+  background-color: hotpink;
+}
+
 #header {
   padding: 86px 0px;
   color: white;
   background-color: black;
+  margin-top: 100px;
+}
 
- }
 #header h1{
   color: chartreuse;
-
 }
 
 #content {
