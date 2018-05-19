@@ -7,34 +7,65 @@ var story = {
 
     "right": "You start running towards the light, hoping they can help you! Uh oh, that doesnt look like a normal light. You keep getting closer when you hear this strange buzzing noise. You look up to get a better view and you see a UFO, next thing you know it goes black.",
 
-    "left":
-    "text": "Your smart. You survive."
+    "left": "You're smart, you survive"
 
 
 };
-var root = document.querySelector( "#root" );
-var tellStory = function tellStory(){
-    var answer = prompt( story.start );
 
-    if( answer === "stay" ){
-        document.querySelector( "#root" ).textContent = story[answer];
-    }
-    else if( answer === "run" ){
-        answer = prompt( story[answer] );
-        if( answer === "right" || answer === "left" ){
-            document.querySelector( "#root" ).textContent = story[answer];
+var choices = [ "start", "run", "stay", "right", "left" ];
+
+var isValid = false;
+
+
+function checkValid( select ){
+    choices.forEach( function( checker ){
+        if( select === checker ){
+            console.log( "true!" );
+            isValid = true;
+            document.getElementById( "errorLog" ).textContent = " ";
         }
-        else{
-            tellStory();
-        }
-    }
-    else{
-        tellStory();
-    }
-};
+    } );
 
-tellStory();
+    if( isValid === false ){
+        console.log( "Not Valid, says I" );
+        document.getElementById( "errorLog" ).textContent += "You messed up.";
+    }
+}
 
-var runStory = function(){
-    $( "#output" ).text = story.start["text"];
-};
+function runStory(){
+    var selection = document.getElementById( "textInput" ).value;
+
+    checkValid( selection );
+    if( isValid === true ){
+        document.getElementById( "textOutput" ).textContent = story[selection];
+    }
+
+    isValid = false;
+}
+
+// var root = document.querySelector( "#root" );
+// var tellStory = function tellStory(){
+//     var answer = prompt( story.start );
+//
+//     if( answer === "stay" ){
+//         document.querySelector( "#root" ).textContent = story[answer];
+//     }
+//     else if( answer === "run" ){
+//         answer = prompt( story[answer] );
+//         if( answer === "right" || answer === "left" ){
+//             document.querySelector( "#root" ).textContent = story[answer];
+//         }
+//         else{
+//             tellStory();
+//         }
+//     }
+//     else{
+//         tellStory();
+//     }
+// };
+//
+// tellStory();
+//
+// var runStory = function(){
+//     $( "#output" ).text = story.start["text"];
+// };
