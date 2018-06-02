@@ -190,15 +190,38 @@ footer.second {
   opacity: 0.95;
 }
 
-
+/*-------Media------*/
 @media screen and (max-width: 470px){
   body {
-    position: fixed;
+    position: absolute;
   }
+}
+@media screen and (max-width: 470px){
+  header {
+    position: absolute;
+  }
+
   #menu-icon {
-    display: block;
+    display: inline-block;
     width: 40%;
     height: 40%;
     background: url(https://use.fontawesome.com/releases/v5.0.13/svgs/solid/bars.svg);
+}
+  nav il. nav:active ul {
+    display: none;
+    position: absolute;
+    padding: 20px;
+    background: #405580;
+    border: 1px solid #FFF;
+    right: 20px;
+    top: 60px;
+    width: 50%;
+    border-radius: 2px 0 2px 2px;
+  }
 
+section {
+  float: left;
+  width: 100%;
+  margin: 0;
+  padding: 0;
 }
