@@ -191,21 +191,22 @@ footer.second {
 }
 
 /*-------Media------*/
-@media screen and (max-width: 470px){
+@media screen and (max-width: 600px){
   body {
     position: absolute;
   }
 }
-@media screen and (max-width: 470px){
+@media screen and (max-width: 600px){
   header {
     position: absolute;
   }
 
   #menu-icon {
-    display: inline-block;
-    width: 40%;
-    height: 40%;
-    background: url(https://use.fontawesome.com/releases/v5.0.13/svgs/solid/bars.svg);
+    display: block;
+    width: 100%;
+    height: 40px;
+    background: url(https://use.fontawesome.com/releases/v5.0.13/svgs/solid/bars.svg) no-repeat 98% center;
+    cursor: pointer;
 }
   nav il. nav:active ul {
     display: none;
@@ -218,8 +219,20 @@ footer.second {
     width: 50%;
     border-radius: 2px 0 2px 2px;
   }
-
+/* width on this will change all sections to 100% width when shrunk down to mobile size, erasing overlapping*/
 section {
+  float: left;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+article {
+  float: left;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+aside {
   float: left;
   width: 100%;
   margin: 0;
